@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Запрос 4</title>
+    </head>
+    <body bgcolor=silver text=black>
+        <h1>Запрос 4</h1>
+        <table style="width:30%">
+            <tr>
+                <th align = left>idPub</th>
+                <th align = left>address</th>
+                <th align = left>phone_number</th>
+                <th align = left>full_name_of_cont</th>
+		<th align = left>date_of_establishment</th>
+                <th align = left>date_of_contract_forming</th>
+            </tr>
+            {% for client in Data %}
+            <tr>
+                <td>{{client["idPub"]}}</td>
+                <td>{{client["address"]}}</td>
+                <td>{{client["phone_number"]}}</td>
+                <td>{{client["full_name_of_cont"]}}</td>
+		<td>{{client["date_of_establishment"]}}</td>
+                <td>{{client["date_of_contract_forming"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br>
+        <a href="/?point=back"> Вернуться назад </a>
+    </body>
+</html>
